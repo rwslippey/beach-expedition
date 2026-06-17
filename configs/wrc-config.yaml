@@ -1,0 +1,27 @@
+global:
+  uniqueSystemDeviceNames: false
+
+server:
+  publicHostname: "10.70.1.186"
+  ipv6: false
+  lanMode: false
+
+devices:
+- id: "FT710"
+  type: "rigctld"
+  rigctld:
+    localInstance:
+      enabled: true
+      model: 1049
+      rigDevice: "id:usb-Silicon_Labs_CP2105_Dual_USB_to_UART_Bridge_Controller_01B9C47D-if00-port0"
+      serialSpeed: 38400
+
+    morseKeyer:
+      enabled: true
+      switch:
+        name: "ft710key"
+
+  media:
+    stream:
+      audioInputDeviceName: "alsa_input.usb-C-Media_Electronics_Inc._USB_Audio_Device-00.mono-fallback"
+      audioOutputDeviceName: "alsa_output.usb-C-Media_Electronics_Inc._USB_Audio_Device-00.analog-stereo"
